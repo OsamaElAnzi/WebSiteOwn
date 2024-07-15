@@ -117,7 +117,7 @@ function makeAccount()
     
             // Fetch the count of rows matching the given username
             $rowCount = $stmt->fetchColumn();
-    
+    // test
             if ($rowCount > 0) {
                 header("Location: AanMaakAcc.html?alert=1");
                 exit();
