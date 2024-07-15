@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <!-- styling werkt op alles behavle deze div :\ -->
+    <div class="outer-box" style="
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    width: 949px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;">
+        <h1>Maak een nieuw account aan</h1>
+        <div class="box">
+            <form method="post" action="MakeNewAccount.php">
+                <input type="text" id="username" name="username/e-mail" placeholder="Nieuw e-mail/Gebruikersnaam" required>
+                <br><br>
+                <input type="password" id="password" name="password" placeholder="Nieuw Wachtwoord" required>
+                <br>
+                <input type="password" id="password2" name="password2" placeholder="Bevestig Wachtwoord" required>
+                <br><br>
+                <input type="submit" name="aanMakenVanAccount" value="Submit">
+                <br>
+            </form>
+            <div class="foto">
+                <img src="rainwater-7858773.jpg" width="600px">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

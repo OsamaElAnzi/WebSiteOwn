@@ -1,58 +1,69 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0; /* Zorg ervoor dat er geen standaard marge is */
-    position: relative; /* Voor positionering van het pseudo-element */
-    overflow: hidden; /* Zorgt ervoor dat het pseudo-element niet buiten het body-element komt */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0; /* Zorg ervoor dat er geen standaard marge is */
+  position: relative; /* Voor positionering van het pseudo-element */
+  overflow: hidden; /* Zorgt ervoor dat het pseudo-element niet buiten het body-element komt */
 }
 
 body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('amazon-4769367.jpg'); /* Voeg hier je afbeeldingspad toe */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: blur(15px); /* Pas de vervaging aan naar wens */
-    z-index: -1; /* Plaatst het pseudo-element achter de andere inhoud */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("amazon-4769367.jpg"); /* Voeg hier je afbeeldingspad toe */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(15px); /* Pas de vervaging aan naar wens */
+  z-index: -1; /* Plaatst het pseudo-element achter de andere inhoud */
 }
 a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 15px;
-    transition: color 0.3s ease;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  transition: color 0.3s ease;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 input {
-    font-size: 5vh;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    background-color: #ddd;
-    cursor: pointer;
-    
+  font-size: 5vh;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: #ddd;
+  cursor: pointer;
 }
 form {
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 .box {
-    width: 800px;
-    height: 400px;
-    background-color: black;
-    display: flex;
-    top: 20px;
-    flex-direction: row;
+  width: 800px;
+  height: 400px;
+  background-color: black;
+  display: flex;
+  top: 20px;
+  flex-direction: row;
 }
+/* deze div staat al in de html omdat het via hier niet werkt */
+/* .outer-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  width: 949px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+} */
+
