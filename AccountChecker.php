@@ -7,4 +7,5 @@ function acccountCheckenOfBestaat() {
         $password = $_POST['password'];
     }
 }
+// verificatie nodig
 ?>
