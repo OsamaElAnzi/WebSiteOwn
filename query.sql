@@ -1,0 +1,7 @@
+CREATE DATABASE IF NOT EXISTS accounts;
+USE accounts;
+CREATE TABLE gegevens (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    GebruikersNaam VARCHAR(50) NOT NULL,
+    Wachtwoord VARCHAR(50) NOT NULL
+)
