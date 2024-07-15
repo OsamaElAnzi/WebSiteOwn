@@ -5,18 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style1.css">
+    <script>
+        // Function to get URL parameters
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Function to show alert if the parameter is present
+        function showAlertIfNeeded() {
+            const alertParam = getQueryParam('alert');
+            if (alertParam === '1') {
+                alert('Gebruikersnaam bestaat al.');
+            }
+        }
+
+        // Run the function when the document is ready
+        document.addEventListener('DOMContentLoaded', showAlertIfNeeded);
+    </script>
 </head>
 <body>
     <!-- styling werkt op alles behavle deze div :\ -->
-    <div class="outer-box" style="
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: black;
-    width: 949px;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;">
+    <div class="outer-box">
         <h1>Maak een nieuw account aan</h1>
         <div class="box">
             <form method="post" action="MakeNewAccount.php">
@@ -24,13 +34,14 @@
                 <br><br>
                 <input type="password" id="password" name="password" placeholder="Nieuw Wachtwoord" required>
                 <br>
-                <input type="password" id="password2" name="password2" placeholder="Bevestig Wachtwoord" required>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Bevestig Wachtwoord" required>
                 <br><br>
-                <input type="submit" name="aanMakenVanAccount" value="Submit">
+                <input type="submit" id="test" name="aanMakenVanAccount" onclick="checkPassword()" value="Submit">
                 <br>
+                <a href="logIn.html">Terug naar login pagina.</a>
             </form>
             <div class="foto">
-                <img src="rainwater-7858773.jpg" width="600px">
+                <img src="lake.jpg" width="600px">
             </div>
         </div>
     </div>

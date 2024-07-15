@@ -22,12 +22,12 @@ body::before {
   filter: blur(15px); /* Pas de vervaging aan naar wens */
   z-index: -1; /* Plaatst het pseudo-element achter de andere inhoud */
 }
-a {
+a ,p{
   text-decoration: none;
   color: #fff;
   font-size: 15px;
   transition: color 0.3s ease;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  
 }
 input {
   font-size: 5vh;
@@ -39,6 +39,10 @@ input {
   font-size: 16px;
   background-color: #ddd;
   cursor: pointer;
+}
+p {
+  color: white; 
+  font-family: 'Courier New', Courier, monospace;
 }
 form {
   width: 300px;
@@ -54,16 +58,16 @@ form {
   display: flex;
   top: 20px;
   flex-direction: row;
+  font-family: 'Courier New', Courier, monospace;
 }
 /* deze div staat al in de html omdat het via hier niet werkt */
-/* .outer-box {
+.outer-box {
   display: flex;
   align-items: center;
   flex-direction: column;
   background-color: black;
   width: 949px;
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-} */
+  font-family: 'Courier New', Courier, monospace;
+}
 
