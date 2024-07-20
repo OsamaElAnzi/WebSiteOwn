@@ -4,8 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: black;
+            color:aliceblue
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        nav{
+            background-image: url('trees-8451483.jpg');
+            background-size: cover;        /* Make the background cover the entire area */
+            background-repeat: no-repeat;  /* Prevent the background from repeating */
+            background-position: center;
+        }
+        nav ul{
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            padding: 20px;
+        }
+        nav li {
+            background-color: aliceblue;
+            opacity: 0.8;
+            padding: 10px;
+            background-color: black;
+            border-radius: 12px;
+        }
+        .foto {
+            display: flex;
+            flex-direction: row;
+            color: aliceblue;
+        }
+        .TextL{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 1000px;
+        }
+        .TextR {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 2000px;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -26,5 +77,42 @@
             </li>
         </ul>
     </nav>
+    
+    <div class="main-content">
+        <h1>Welkom bij mijn project 🙂</h1>
+        <h2>Log in om je favorite foto te bewaren.</h2>
+        <div class="foto">
+            <img src="hut-8843868.jpg" width="1000px">
+            <div class="TextL">
+                <h1>hut</h1>
+                <p>`Een stijlvolle hut met een gezicht en een bovenkant.`</p>
+                <a href="https://pixabay.com/nl/photos/hut-meer-woud-zee-reflectie-8843868/">Meer info</a>
+            </div>
+        </div>
+        <div class="foto" >
+            <div class="TextR">
+                <h1>Gekko</h1>
+                <p>`Een breed sterke gekko met een kleine hoek en een lange tail.`</p>
+                <a href="https://pixabay.com/nl/photos/gekko-meer-water-water-8451481/">Meer info</a>
+            </div>
+            <img src="gecko-8483282.png" width="1000px">
+        </div>
+        <div class="foto">
+            <img src="flowers-8718879.jpg" width="1000px">
+            <div class="TextL">
+                <h1>Bloem</h1>
+                <p>`Een stijlvolle plaats met vele verschillende planten.`</p>
+                <a href="https://pixabay.com/nl/photos/planten-meer-planten-water-8718879/">Meer info</a>
+            </div>
+        </div>
+        <div class="foto">
+            <div class="TextR">
+                <h1>Kat</h1>
+                <p>`Een stijlvolle kat.`</p>
+                <a href="https://pixabay.com/nl/photos/kat-meer-water-water-8612685/">Meer info</a>
+            </div>
+            <img src="cat-8612685.jpg" width="1000px">
+        </div>
+    </div>
 </body>
 </html>
