@@ -101,7 +101,7 @@ function makeAccount()
         }
 
         // Hash the password
-        $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+        // $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
 
         // Add database connection and insert new account data here
         $conn = conn();
@@ -126,7 +126,7 @@ function makeAccount()
                 $insertQuery = "INSERT INTO gegevens(GebruikersNaam, Wachtwoord) VALUES (:username, :password)";
                 $stmt = $conn->prepare($insertQuery);
                 $stmt->bindParam(':username', $username);
-                $stmt->bindParam(':password', $hashedPassword);
+                $stmt->bindParam(':password', $password);
     
                 // Execute the INSERT query
                 $stmt->execute();

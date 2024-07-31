@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style1.css">
+    <title>Log hier in</title>
+    <link rel="stylesheet" href=".\style\style1.css">
     
 </head>
 <body>
+    <header>
+        <form method="post" action="AccountChecker.php">
+            <input type="submit" name="terug" value="<">
+        </form>
+    </header>
     <div class="outer-box">
         <div class="box">
             <form method="post" action="AccountChecker.php">
@@ -19,12 +24,11 @@
                 <br>
                 <a href="WWHerstellen.php">Herstel wachtwoord.</a>
                 <br><br>
-                <input type="submit" name="submitCheckIfAccountExsist" value="Submit">
-                <br>
+               <input type="submit" name="submitCheckIfAccountExsist" value="Submit">
                 <a href="AanMaakAcc.html">Geen account? Klik hier!</a>
             </form>
             <div class="foto">
-                <img src="file.png" width="600px">
+                <img src=".\foto\file.png" width="600px">
             </div>
         </div>
     </div>

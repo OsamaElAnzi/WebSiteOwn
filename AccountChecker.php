@@ -3,6 +3,10 @@
 include 'DBrelated.php';
 
 function acccountCheckenOfBestaat() {
+    if ($_POST['terug']) {
+        header('Location: index.html');
+        exit();
+    }
     if (isset($_POST['submitCheckIfAccountExsist'])) {
         $username = $_POST['username/e-mail'];
         $password = $_POST['password'];

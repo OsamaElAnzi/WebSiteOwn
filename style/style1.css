@@ -15,7 +15,7 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("amazon-4769367.jpg"); /* Voeg hier je afbeeldingspad toe */
+  background-image: url(".\foto\amazon-4769367.jpg"); /* Voeg hier je afbeeldingspad toe */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -70,4 +70,7 @@ form {
   color: white;
   font-family: 'Courier New', Courier, monospace;
 }
-
+.knoppen {
+  display: flex;
+  flex-direction: row;
+}
