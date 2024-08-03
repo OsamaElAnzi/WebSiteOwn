@@ -5,7 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log hier in</title>
     <link rel="stylesheet" href=".\style\style1.css">
-    
+    <script>
+        // Function to get URL parameters
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Function to show alert if the parameter is present
+        function showAlertIfNeeded() {
+            const alertParam = getQueryParam('alert');
+            if (alertParam === '1') {
+                alert('Je log in gegevens kloppen niet!\nprobeer opnieuw.');
+            }
+        }
+
+        // Run the function when the document is ready
+        document.addEventListener('DOMContentLoaded', showAlertIfNeeded);
+    </script>
 </head>
 <body>
     <header>
@@ -17,8 +34,7 @@
         <div class="box">
             <form method="post" action="AccountChecker.php">
                 <p>Log in</p>
-                
-                <input type="text" id="username" name="username/e-mail" placeholder="e-mail/Gebruikersnaam" required>
+                <input type="text" id="email" name="email" placeholder="e-mail" required>
                 <br><br>
                 <input type="password" id="password" name="password" placeholder="Wachtwoord" required>
                 <br>

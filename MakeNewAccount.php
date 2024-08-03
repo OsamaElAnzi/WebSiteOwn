@@ -91,12 +91,18 @@ function makeAccount()
     if (isset($_POST['aanMakenVanAccount'])) {
         
         // Retrieve and sanitize input
-        $username = $_POST['username/e-mail'];
+        $email = $_POST['email'];
         $password = $_POST['password']; // Assuming password is already validated elsewhere
 
         // Check for empty fields
-        if (empty($username) || empty($password)) {
-            echo "Username and password cannot be empty.";
+        if (empty($email) || empty($password)) {
+            echo "email and password cannot be empty.";
+            return;
+        }
+        // checken of email @ bevat
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            echo '<h1 style="color:red">DIT IS GEEN EMAIL</h1>';
+            header('refresh:3; url=AanMaakAcc.html');
             return;
         }
 
@@ -110,12 +116,12 @@ function makeAccount()
             return;
         }
         try {
-            $checkQuery = "SELECT COUNT(*) FROM gegevens WHERE GebruikersNaam = :username";
+            $checkQuery = "SELECT COUNT(*) FROM gegevens WHERE Email = :email";
             $stmt = $conn->prepare($checkQuery);
-            $stmt->bindParam(':username', $username);
+            $stmt->bindParam(':email', $email);
             $stmt->execute();
     
-            // Fetch the count of rows matching the given username
+            // Fetch the count of rows matching the given email
             $rowCount = $stmt->fetchColumn();
     // test
             if ($rowCount > 0) {
@@ -123,9 +129,9 @@ function makeAccount()
                 exit();
             } else {
                 // Prepare the INSERT query
-                $insertQuery = "INSERT INTO gegevens(GebruikersNaam, Wachtwoord) VALUES (:username, :password)";
+                $insertQuery = "INSERT INTO gegevens(Email, Wachtwoord) VALUES (:email, :password)";
                 $stmt = $conn->prepare($insertQuery);
-                $stmt->bindParam(':username', $username);
+                $stmt->bindParam(':email', $email);
                 $stmt->bindParam(':password', $password);
     
                 // Execute the INSERT query

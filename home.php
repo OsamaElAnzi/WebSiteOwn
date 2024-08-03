@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="container">
-        <h1>Welkom <?php echo $_GET['username']; ?></h1>
+        <h1>Welkom <?php echo $_GET['email']; ?></h1>
         
     </div>
 </body>
