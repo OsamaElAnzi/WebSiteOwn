@@ -6,6 +6,7 @@ body {
   margin: 0; /* Zorg ervoor dat er geen standaard marge is */
   position: relative; /* Voor positionering van het pseudo-element */
   overflow: hidden; /* Zorgt ervoor dat het pseudo-element niet buiten het body-element komt */
+
 }
 
 body::before {
@@ -15,12 +16,13 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(".\foto\amazon-4769367.jpg"); /* Voeg hier je afbeeldingspad toe */
+  background-image: url(".\foto\amazon.png");
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: blur(15px); /* Pas de vervaging aan naar wens */
-  z-index: -1; /* Plaatst het pseudo-element achter de andere inhoud */
+  filter: blur(15px); /* Adjust the blur as needed */
+  z-index: -1; /* Places the pseudo-element behind the other content */
 }
 a ,p{
   text-decoration: none;
