@@ -1,131 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./style/style1.css" />
     <style>
-        body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0; /* Zorg ervoor dat er geen standaard marge is */
-  position: relative; /* Voor positionering van het pseudo-element */
-  overflow: hidden; /* Zorgt ervoor dat het pseudo-element niet buiten het body-element komt */
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("./foto./amazon.png");
 
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("./foto/amazon.png");
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  filter: blur(15px); /* Adjust the blur as needed */
-  z-index: -1; /* Places the pseudo-element behind the other content */
-}
-a ,p{
-  text-decoration: none;
-  color: #fff;
-  font-size: 15px;
-  transition: color 0.3s ease;
-  
-}
-input {
-  font-size: 5vh;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  background-color: #ddd;
-  cursor: pointer;
-}
-p {
-  color: white; 
-  font-family: 'Courier New', Courier, monospace;
-}
-form {
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-.box {
-  width: 800px;
-  height: 400px;
-  background-color: black;
-  display: flex;
-  top: 20px;
-  flex-direction: row;
-  font-family: 'Courier New', Courier, monospace;
-}
-/* deze div staat al in de html omdat het via hier niet werkt */
-.outer-box {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-color: black;
-  width: 949px;
-  color: white;
-  font-family: 'Courier New', Courier, monospace;
-}
-.knoppen {
-  display: flex;
-  flex-direction: row;
-}
-
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: blur(15px); /* Adjust the blur as needed */
+        z-index: -1; /* Places the pseudo-element behind the other content */
+      }
     </style>
     <script>
-        // Function to get URL parameters
-        function getQueryParam(param) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(param);
-        }
+      // Function to get URL parameters
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
 
-        // Function to show alert if the parameter is present
-        function showAlertIfNeeded() {
-            const alertParam = getQueryParam('alert');
-            if (alertParam === '1') {
-                alert('Gebruikersnaam bestaat al.');
-            } else if (alertParam === '2') {
-                alert('Je hebt nog geen account!<br>Maak een aan.');
-            }
+      // Function to show alert if the parameter is present
+      function showAlertIfNeeded() {
+        const alertParam = getQueryParam("alert");
+        if (alertParam === "1") {
+          alert("Gebruikersnaam bestaat al.");
+        } else if (alertParam === "2") {
+          alert("Je hebt nog geen account!<br>Maak een aan.");
         }
+      }
 
-        // Run the function when the document is ready
-        document.addEventListener('DOMContentLoaded', showAlertIfNeeded);
+      // Run the function when the document is ready
+      document.addEventListener("DOMContentLoaded", showAlertIfNeeded);
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- styling werkt op alles behavle deze div :\ -->
     <div class="outer-box">
-        <h1>Maak een nieuw account aan</h1>
-        <div class="box">
-            <form method="post" action="MakeNewAccount.php">
-                <input type="text" id="email" name="email" placeholder="Nieuwe e-mail" required>
-                <br><br>
-                <input type="password" id="password" name="password" placeholder="Aanmaken Wachtwoord" required>
-                <br>
-                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Bevestig Wachtwoord" required>
-                <br><br>
-                <input type="submit" id="test" name="aanMakenVanAccount" onclick="checkPassword()" value="Submit">
-                <br>
-                <a href="logIn.html">Terug naar login pagina.</a>
-            </form>
-            <div class="foto">
-                <img src=".\foto\lake.jpg" width="600px">
-            </div>
+      <h1>Maak een nieuw account aan</h1>
+      <div class="box">
+        <form method="post" action="MakeNewAccount.php">
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Nieuwe e-mail"
+            required
+          />
+          <br /><br />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Aanmaken Wachtwoord"
+            required
+          />
+          <br />
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            placeholder="Bevestig Wachtwoord"
+            required
+          />
+          <br /><br />
+          <input
+            type="submit"
+            id="test"
+            name="aanMakenVanAccount"
+            onclick="checkPassword()"
+            value="Submit"
+          />
+          <br />
+          <a href="logIn.html">Terug naar login pagina.</a>
+        </form>
+        <div class="foto">
+          <img src=".\foto\lake.jpg" width="600px" />
         </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

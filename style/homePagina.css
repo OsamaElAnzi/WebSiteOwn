@@ -1,0 +1,50 @@
+/* NIET AAN ZITTEN */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    color:aliceblue
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+nav{
+    background-image: url('trees-8451483.jpg');
+    background-size: cover;        /* Make the background cover the entire area */
+    background-repeat: no-repeat;  /* Prevent the background from repeating */
+    background-position: center;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 20px;
+}
+nav li {
+    background-color: aliceblue;
+    opacity: 0.8;
+    padding: 10px;
+    background-color: black;
+    border-radius: 12px;
+}
+.foto {
+    display: flex;
+    flex-direction: row;
+    color: aliceblue;
+}
+.TextL{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 1000px;
+}
+.TextR {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 2000px;
+}

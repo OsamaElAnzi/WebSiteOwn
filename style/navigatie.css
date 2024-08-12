@@ -1,3 +1,10 @@
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    color: #fff;
+}
 nav {
     display: flex;
     flex-direction: row;
