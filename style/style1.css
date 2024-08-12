@@ -6,6 +6,8 @@ body {
   margin: 0; /* Zorg ervoor dat er geen standaard marge is */
   position: relative; /* Voor positionering van het pseudo-element */
   overflow: hidden; /* Zorgt ervoor dat het pseudo-element niet buiten het body-element komt */
+  font-family: 'Courier New', Courier, monospace;
+
 
 }
 
@@ -75,4 +77,11 @@ form {
 .knoppen {
   display: flex;
   flex-direction: row;
+}
+
+label, input {
+  font-family: 'Courier New', Courier, monospace;
+}
+label {
+  color:#ddd;
 }
