@@ -18,7 +18,7 @@ function acccountCheckenOfBestaat()
             $conn = conn();
             if ($conn) {
                 echo "connection successful\n";
-                $stmt = $conn->prepare("SELECT * FROM gegevens WHERE Email = :email AND Wachtwoord = :password");
+                $stmt = $conn->prepare("");
                 $stmt->bindParam(':email', $email);
                 $stmt->bindParam(':password', $password);
                 $stmt->execute();
