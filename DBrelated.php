@@ -1,9 +1,6 @@
 <?php
 function conn() {
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "accounts"; // Specify the database name
+    //bruh dit is niet de bedoeling
 
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
