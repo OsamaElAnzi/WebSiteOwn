@@ -14,7 +14,7 @@ if (isset($_GET['email'])) {
     }
     
     // Corrected SQL query and use of prepared statements
-    $query = "DELETE FROM gegevens WHERE email = :email";
+    $query = ""//Waarom deed ik dit man :(
     try {
         $stmt = $conn->prepare($query);
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
